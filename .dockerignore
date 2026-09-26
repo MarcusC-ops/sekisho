@@ -1,0 +1,14 @@
+.git
+.env
+.env.*
+**/.env
+**/.env.*
+**/*.db*
+**/__pycache__
+**/.venv
+**/node_modules
+**/.next
+contracts
+dashboard
+website
+**/*.log

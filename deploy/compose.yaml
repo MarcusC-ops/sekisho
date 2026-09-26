@@ -1,0 +1,27 @@
+services:
+  trial:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    env_file: ../.env
+    environment:
+      DB_PATH: /data/gate.db
+      PUBLIC_TRIAL_DB_PATH: /data/public-trial.db
+      PUBLIC_TRIAL_ORIGIN: https://sekisho-phi.vercel.app
+      PUBLIC_TRIAL_LIVE_VERIFIED: "false"
+      SEKISHO_URL: http://127.0.0.1:8000
+      LLM_PROVIDER: none
+      # Keep disabled until the live acceptance checklist passes.
+      PUBLIC_TRIAL_ENABLED: "false"
+    ports:
+      - "127.0.0.1:8200:8200"
+    volumes:
+      - trial-data:/data
+    restart: unless-stopped
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  trial-data:

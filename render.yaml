@@ -1,0 +1,34 @@
+# Persistent single-instance Python trial backend. Marketing stays on Vercel.
+# Paid disk required; review Render's displayed price before provisioning.
+services:
+  - type: web
+    name: sekisho-trial
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    healthCheckPath: /public/readiness
+    disk:
+      name: sekisho-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: PORT
+        value: "8200"
+      - key: DB_PATH
+        value: /data/gate.db
+      - key: PUBLIC_TRIAL_DB_PATH
+        value: /data/public-trial.db
+      - key: PUBLIC_TRIAL_ENABLED
+        value: "false"
+      - key: PUBLIC_TRIAL_LIVE_VERIFIED
+        value: "false"
+      - key: PUBLIC_TRIAL_ORIGIN
+        value: https://sekisho-phi.vercel.app
+      - key: SEKISHO_URL
+        value: http://127.0.0.1:8000
+      - key: LLM_PROVIDER
+        value: none
+      - key: DEMO_MODE
+        value: "false"
