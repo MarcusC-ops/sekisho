@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96" role="img" aria-labelledby="title">
+<title id="title">Sekisho — the agent payment checkpoint</title>
+<rect width="400" height="96" rx="12" fill="#ffffff"/>
+<g transform="translate(12 16)">
+<rect width="64" height="64" rx="10" fill="#1b3f8f"/>
+<rect x="5" y="5" width="54" height="54" rx="6" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
+<path d="M17 16v34M47 16v34" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+<path d="M11 22h42M14 31h36" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/>
+</g>
+<text x="94" y="58" fill="#101b2b" font-family="Atkinson Hyperlegible Next, Arial, sans-serif" font-size="46" font-weight="700">Sekisho</text>
+<text x="94" y="79" fill="#4f5b6c" font-family="Arial, sans-serif" font-size="13" letter-spacing="1.4">AGENT PAYMENT CHECKPOINT</text>
+</svg>
