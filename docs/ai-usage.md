@@ -64,3 +64,7 @@ This repository was initialized from an existing local working copy on 27 Septem
 a reconstruction of the original development timeline. Previous Git history was not
 imported. Historical personal account references were anonymized, current repository
 links were updated, and the existing license and development records were retained.
+
+Codex updated the public homepage deployment status and setup links after the final
+repository check, using the recorded live evidence and retaining the unverified
+provider-triggered HOLD-to-escrow limitation.
