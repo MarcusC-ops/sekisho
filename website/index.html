@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F0EBE6">
+  <title>Sekisho — A checkpoint for AI payments.</title>
+  <meta name="description" content="A compliance checkpoint for AI agent payments. Screen the wallet, apply a deterministic policy, and record the decision onchain. Explore the Sekisho testnet project.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sekisho — A checkpoint for AI payments.">
+  <meta property="og:description" content="Screen the wallet. Apply the policy. Record the decision. A checkpoint for AI agent payments.">
+  <meta property="og:image" content="https://sekisho-phi.vercel.app/assets/social-preview.png">
+  <meta property="og:url" content="https://sekisho-phi.vercel.app/">
+  <link rel="canonical" href="https://sekisho-phi.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="preload" href="/assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/editorial.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main">
+<div class="hero-wrap">
+  <header class="header container">
+    <a class="brand" href="/" aria-label="Sekisho home"><img src="/assets/logo.svg" width="36" height="36" alt=""><span>Sekisho</span><span class="kanji" lang="ja">関所</span></a>
+    <nav aria-label="Main navigation"><a href="https://sekisho-phi.vercel.app/try/">Try Sekisho</a><a href="#console">The console</a><a href="#integrate">Integrate</a></nav>
+    <a class="button button-small" href="https://github.com/MarcusC-ops/sekisho">View on GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+    <section class="hero container" aria-labelledby="hero-title">
+      <p class="eyebrow light">A checkpoint for AI payments</p>
+      <h1 id="hero-title">Your AI can pay.<br><em>Who checks</em><br>the recipient?</h1>
+      <p class="hero-copy">For agent builders and x402 services: Sekisho turns wallet-risk evidence into a decision enforced before signing. Let a purchase proceed, pause it for review, or refuse it.</p>
+      <div class="actions"><a class="button" href="https://sekisho-phi.vercel.app/try/">Try a five-cent purchase <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="https://github.com/MarcusC-ops/sekisho/blob/main/sdk/README.md">Explore the project <span aria-hidden="true">↗</span></a></div>
+      <p class="hero-note">Explore the simulation now · Live testnet validation pending</p>
+    </section>
+</div>
+    <section class="section container" id="why" aria-labelledby="why-title">
+      <p class="eyebrow">The everyday stakes</p><h2 id="why-title">A helpful assistant.<br><em>An unchecked payment.</em></h2>
+      <p class="story-copy">Imagine your AI assistant buying a useful report for five cents. The seller asks it to pay a wallet. A convincing request does not tell you whether that wallet has known risk signals.</p>
+      <div class="comparison" aria-label="Payment timing comparison">
+        <div><h3>Without a check before signing</h3><ol class="flow"><li>Payment request</li><li>Money moves</li><li>Risk noticed later</li></ol><p>A mistake can be hard to undo.</p></div>
+        <div><h3>With Sekisho in the payment path</h3><ol class="flow"><li>Payment request</li><li class="checkpoint">Check + policy</li><li>Allow, hold or block</li></ol><p>Evidence informs the decision before signing.</p></div>
+      </div>
+    </section>
+    <section class="section container checkpoint-section" id="how-it-works" aria-labelledby="how-title">
+      <p class="eyebrow">The payment checkpoint</p><h2 id="how-title">A second look,<br><em>before money moves.</em></h2>
+      <p class="story-copy">The assistant asks to pay. Sekisho checks the recipient’s wallet against risk evidence and your payment rules. The result determines what can happen next.</p>
+      <figure class="checkpoint-figure"><picture><source media="(max-width: 760px)" srcset="/assets/01-payment-checkpoint-mobile.svg"><img src="/assets/01-payment-checkpoint.svg" width="1600" height="900" loading="lazy" alt="The assistant asks to pay. Sekisho checks wallet risk and payment rules. Allow permits signing, Hold pauses signing for human review, Block produces no payment signature."></picture><figcaption>HOLD pauses signing; escrow exists only after a separately confirmed deposit. Missing evidence never becomes an automatic pass.</figcaption></figure>
+      <a class="button" href="#demo">Follow a payment <span aria-hidden="true">↓</span></a>
+    </section>
+    <section class="section container" id="responsibility" aria-labelledby="risk-title">
+      <p class="eyebrow">For banks and payment providers</p><h2 id="risk-title">Moving money comes<br><em>with responsibility.</em></h2>
+      <p class="story-copy">A risky transaction can create investigation work, remediation costs and, where applicable rules are breached, regulatory penalties. Teams also need a record of what they knew when they acted.</p>
+      <div class="risk-diagram" aria-label="Institutional risks and supporting controls">
+        <div><h3>A prohibited recipient</h3><span aria-hidden="true">→</span><p>Sanctions exposure</p><small>Check risk evidence before signing</small></div>
+        <div><h3>Suspicious activity</h3><span aria-hidden="true">→</span><p>Investigation and remediation</p><small>Route uncertain cases to human review</small></div>
+        <div><h3>An unexplained decision</h3><span aria-hidden="true">→</span><p>Weak evidence for review</p><small>Keep the policy and reasons with the case</small></div>
+      </div>
+      <p class="source-note">Duties depend on jurisdiction and activity. U.S. sanctions context: <a href="https://ofac.treasury.gov/faqs/560">OFAC</a>. International AML context: <a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-virtual-assets-2021.html">FATF guidance</a>. Sekisho is a prototype control, not a complete compliance programme.</p>
+    </section>
+    <section class="section container demo-section" id="demo" aria-labelledby="demo-heading">
+      <div class="section-heading"><div><p class="eyebrow">Follow the decision</p><h2 id="demo-heading">One payment.<br>Four possible paths.</h2></div><p class="section-intro">Take a 30-second walkthrough. Change the counterparty, inspect the evidence, and see where the same payment goes.</p></div>
+      <div class="demo-shell">
+        <p class="demo-disclosure"><strong>Guided simulation</strong><span>Synthetic examples · No screening calls or transactions</span></p>
+        <div id="demo-fallback"><p>The walkthrough needs JavaScript. You can still explore the source and run the labelled fixture console locally.</p><a class="text-link" href="https://github.com/MarcusC-ops/sekisho#explore-the-console-without-credentials">Open the setup guide →</a></div>
+        <div id="demo-interactive" hidden>
+          <div class="demo-scenarios" role="group" aria-label="Choose a synthetic wallet scenario">
+            <button type="button" data-scenario="clean" aria-pressed="true">Meets demo policy</button><button type="button" data-scenario="mixer" aria-pressed="false">Needs review</button><button type="button" data-scenario="sanctioned" aria-pressed="false">Blocked by demo policy</button><button type="button" data-scenario="unavailable" aria-pressed="false">Risk data unavailable</button>
+          </div>
+          <ol class="demo-steps" aria-label="Payment walkthrough"><li data-step="0" aria-current="step">01 Request</li><li data-step="1">02 Evidence</li><li data-step="2">03 Decision</li><li data-step="3">04 Outcome</li></ol>
+          <div class="demo-content">
+            <p id="demo-progress" class="eyebrow"></p><span id="demo-verdict" hidden></span><h3 id="demo-title" tabindex="-1"></h3><div id="demo-body"></div>
+            <div id="demo-officer" hidden><p class="demo-officer-label">Explore the officer's options (simulation)</p><div class="actions"><button type="button" class="button button-small" data-resolution="release">Simulate release</button><button type="button" class="demo-secondary" data-resolution="refund">Simulate refund</button></div></div>
+          </div>
+          <div class="demo-controls"><button type="button" class="demo-secondary" id="demo-back" disabled>← Back</button><button type="button" class="button" id="demo-next">Next: Evidence →</button></div>
+          <p id="demo-announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+      </div>
+    </section>
+    <section class="console-section" id="console" aria-labelledby="console-title"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">The compliance console</p><h2 id="console-title">Clear reasons.<br><em>A human review path.</em></h2></div><div class="section-intro"><p>Follow payments from first screening to final review. Inspect the signals, see what the policy decided, and verify the report.</p><a class="text-link" href="https://github.com/MarcusC-ops/sekisho#explore-the-console-without-credentials">Run the console locally <span aria-hidden="true">↗</span></a></div></div>
+      <figure class="product-shot"><a href="/assets/console-decisions.webp" aria-label="Open the full-size decision console screenshot"><img src="/assets/console-decisions.webp" width="1440" height="1000" loading="lazy" decoding="async" alt="Sekisho decision feed showing held and blocked payments alongside the officer review queue. The purple fixture-data banner identifies synthetic samples."></a><figcaption>Actual console · Synthetic fixture data · No live screening or settlement shown</figcaption></figure>
+    </div></section>
+    <section class="section container human-section" aria-labelledby="human-title">
+      <div class="human-copy"><p class="eyebrow">Human judgment, at the right moment</p><h2 id="human-title">Time for a person<br><em>to take a look.</em></h2><p>A HOLD decision first pauses signing. If a separate escrow deposit is confirmed, test USDC can wait in a smart contract while an authorized operator reviews the case for release or refund.</p><p>A report hash is a digital fingerprint: it checks report consistency, not the truth of the risk evidence or whether payment settled. Application review does not replace legal restrictions on handling funds.</p><a class="text-link" href="https://github.com/MarcusC-ops/sekisho/blob/main/contracts/README.md">Explore the escrow contracts <span aria-hidden="true">↗</span></a></div>
+      <figure class="review-shot"><a href="/assets/console-case.webp" aria-label="Open the full-size case review screenshot"><img src="/assets/console-case.webp" width="1440" height="1000" loading="lazy" decoding="async" alt="A held case in the actual fixture console, with a screening timeline and an officer panel for release or refund."></a><figcaption>Case review · Synthetic fixture example</figcaption></figure>
+    </section>
+    <section class="section container" aria-labelledby="roles-title"><p class="eyebrow">Behind the checkpoint</p><h2 id="roles-title">Evidence in.<br><em>A controlled next step.</em></h2><dl class="integration-roles"><div><dt>Intercepta</dt><dd>Supplies wallet-risk evidence in the screening flow.</dd></div><div><dt>Curvegrid MultiBaas</dt><dd>Supports contract interactions and indexed events.</dd></div><div><dt>x402</dt><dd>Connects payment requests to the assistant’s payment flow.</dd></div></dl><p class="source-note">AI can help explain the case. The policy controls the verdict, and the payment tool enforces it. Live end-to-end validation remains pending; <a href="https://github.com/MarcusC-ops/sekisho/blob/main/docs/readiness.md">follow the build status</a>.</p></section>
+    <section class="integration-section container" id="integrate" aria-labelledby="integrate-title">
+      <div class="integration-copy"><p class="eyebrow light">Built for the agent workflow</p><h2 id="integrate-title">A checkpoint.<br>On both sides.</h2><p>Screen before paying. Screen before accepting payment. Connect through the Python SDK, x402 hooks, or MCP tools.</p><div class="actions"><a class="button" href="https://github.com/MarcusC-ops/sekisho/blob/main/sdk/README.md">Start integrating <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="https://github.com/MarcusC-ops/sekisho/blob/main/docs/api.md">API reference <span aria-hidden="true">↗</span></a></div></div>
+      <div class="sdk-example"><div class="sdk-heading"><span>Python · Screen before signing</span><button type="button" id="copy-sdk" class="demo-secondary" hidden>Copy code</button></div>
+        <!-- sdk-example:start --><pre tabindex="0" aria-label="Python SDK example"><code id="sdk-code">from sekisho import SekishoClient, SekishoError
+
+USDC = &quot;0x036CbD53842c5426634e7929541eC2318f3dCF7e&quot;
+
+
+async def screen_payment(counterparty, gate_url=&quot;http://localhost:8000&quot;):
+    async with SekishoClient(gate_url) as gate:
+        try:
+            decision = await gate.screen(
+                counterparty=counterparty,
+                direction=&quot;outbound&quot;,
+                amount=&quot;50000&quot;,  # 0.05 USDC, in atomic units
+                asset=USDC,
+                payment_chain_id=84532,  # Base Sepolia
+                source=&quot;direct&quot;,
+                agent_id=&quot;my-agent&quot;,
+            )
+        except SekishoError:
+            return &quot;HOLD&quot;  # No usable decision: do not sign.
+        return decision.verdict</code></pre><!-- sdk-example:end -->
+        <p id="copy-status" class="sdk-status" role="status" aria-live="polite"></p>
+        <p class="sdk-note">Install the SDK, start your gate, then call <code>await screen_payment(counterparty)</code>. This screens only; signing requires ALLOW. Use the <a href="https://github.com/MarcusC-ops/sekisho/blob/main/sdk/README.md#payer-side-the-buying-agent">x402 hooks</a> to enforce it in the payment flow.</p>
+        <a class="text-link light-link" href="/screen_before_signing.py" download>Download the tested example ↓</a>
+      </div>
+    </section>
+    <section class="section container faq-section" aria-labelledby="faq-title"><div><p class="eyebrow">A clear starting point</p><h2 id="faq-title">Before you<br>try it.</h2></div><div class="questions">
+      <details><summary>Can I explore without API keys?</summary><p>Yes. Try the guided simulation above, or clone the repository and run the console's fixture preview. It uses synthetic cases and browser-only simulations, with a visible fixture banner. <a href="https://github.com/MarcusC-ops/sekisho#explore-the-console-without-credentials">Follow the quick start.</a></p></details>
+      <details><summary>Is the live payment stack deployed?</summary><p>Not yet. The components are implemented and locally tested. Live service configuration, testnet contract deployment, and the complete payment rehearsal remain pending. <a href="https://github.com/MarcusC-ops/sekisho/blob/main/docs/readiness.md">See the readiness checklist.</a></p></details>
+      <details><summary>Does an ALLOW mean a wallet is safe?</summary><p>No. It is a point-in-time decision under the configured demo policy, based on available evidence. Sekisho is not a certified AML programme or legal advice.</p></details>
+      <details><summary>Where do payments happen?</summary><p>The project's value-transfer and contract chain is Base Sepolia. Ethereum and Base mainnet are used read-only for screening. The public website makes no payments and does not connect to a wallet.</p></details>
+    </div></section>
+    <section class="closing container" aria-labelledby="closing-title"><p class="eyebrow">Sekisho · 関所</p><h2 id="closing-title">Put a checkpoint<br><em>in the payment path.</em></h2><a class="button" href="https://github.com/MarcusC-ops/sekisho#explore-the-console-without-credentials">Try Sekisho locally <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="footer container"><div class="footer-top"><a class="brand" href="/" aria-label="Sekisho home"><img src="/assets/logo.svg" width="30" height="30" alt=""><span>Sekisho</span></a><p>Before the agent signs.</p><div><a href="https://github.com/MarcusC-ops/sekisho">GitHub</a><a href="https://github.com/MarcusC-ops/sekisho/blob/main/docs/readiness.md">Build status</a><a href="https://github.com/MarcusC-ops/sekisho/blob/main/LICENSE">MIT license</a></div></div><div class="footer-bottom"><span>Built for ETHGlobal Tokyo 2026.</span><span>Testnet demo policy. Not legal advice or a certified AML programme.</span></div></footer>
+  <script type="module" src="/demo.mjs"></script>
+</body>
+</html>
