@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sekisho"
+version = "0.1.0"
+description = "Screen the counterparty before an AI agent pays or accepts an x402 payment"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["httpx", "pydantic>=2"]
+
+[project.optional-dependencies]
+x402 = ["x402[httpx,fastapi,evm]==2.24.0"]
+
+[tool.setuptools.packages.find]
+include = ["sekisho*"]
