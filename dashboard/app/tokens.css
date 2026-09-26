@@ -1,0 +1,185 @@
+/*
+ * Sekisho console design tokens. EVERY colour, font, radius, spacing, shadow and duration
+ * used by the console is defined here. Branding is a token swap: change the values in the
+ * "Palette" and "Type" blocks (or map the semantic tokens to brand tokens) and nothing else.
+ *
+ * Direction: warm paper, vivid violet actions, coral and citrus brand accents.
+ * Matches the public website. Green, amber and red remain semantic verdict colours.
+ * Fixture labels stay explicit; body and monospace fonts retain their legibility.
+ */
+
+:root {
+  /* ---------- Palette (raw values: swap these for branding) ---------- */
+  --palette-paper: #fff8ed; /* page background, cool paper */
+  --palette-white: #fffcf7;
+  --palette-ink: #261b35; /* sumi ink */
+  --palette-slate: #665c70; /* secondary text */
+  --palette-mist: #d9cce5;
+  --palette-mist-strong: #9c89ae;
+  --palette-mist-faint: #eee5f3;
+  --palette-ai: #6438ce; /* signal blue: actions */
+  --palette-ai-deep: #4c269f;
+  --palette-ai-wash: #eee3ff;
+  --palette-rokusho: #0f6e47; /* verdigris green: ALLOW */
+  --palette-rokusho-wash: #e1f2e9;
+  --palette-yamabuki: #8a5700; /* dark amber text: HOLD */
+  --palette-yamabuki-mark: #c98700; /* amber marks: HOLD */
+  --palette-yamabuki-bright: #eaa614; /* amber seal fill: HOLD */
+  --palette-yamabuki-wash: #fcf1d6;
+  --palette-shu: #b42a1a; /* vermilion seal ink: BLOCK */
+  --palette-shu-wash: #fbe5e0;
+  --palette-violet: #6a2fb0; /* fixture banner only */
+  --palette-violet-deep: #56238f;
+
+  --brand-coral: #b33d23;
+  --brand-coral-wash: #ffe0d4;
+  --brand-citrus-wash: #fff0bc;
+  --brand-lavender: #e2ceff;
+  --brand-header: linear-gradient(115deg, #f5e9ff, #fff2da);
+  --brand-page: radial-gradient(ellipse at 100% 0%, #eee0ff 0, transparent 48%);
+
+  /* ---------- Semantic colour tokens ---------- */
+  --page: var(--palette-paper);
+  --surface: var(--palette-white);
+  --surface-sunken: #f5edfa;
+  --surface-inverse: var(--palette-ink);
+  --text: var(--palette-ink);
+  --text-inverse: var(--palette-white);
+  --muted: var(--palette-slate);
+  --border: var(--palette-mist);
+  --border-strong: var(--palette-mist-strong);
+  --hairline: var(--palette-mist-faint);
+  --accent: var(--palette-ai);
+  --accent-strong: var(--palette-ai-deep);
+  --accent-wash: var(--palette-ai-wash);
+  --accent-ink: var(--palette-white); /* text on --accent */
+  --focus-ring: var(--palette-ai);
+
+  --verdict-allow: var(--palette-rokusho);
+  --verdict-allow-mark: var(--palette-rokusho);
+  --verdict-allow-wash: var(--palette-rokusho-wash);
+  --verdict-allow-ink: var(--palette-white); /* text on a solid allow fill */
+
+  --verdict-hold: var(--palette-yamabuki);
+  --verdict-hold-mark: var(--palette-yamabuki-mark);
+  --verdict-hold-wash: var(--palette-yamabuki-wash);
+  --verdict-hold-solid: var(--palette-yamabuki-bright);
+  --verdict-hold-ink: #1e1400; /* text on the solid hold fill */
+
+  --verdict-block: var(--palette-shu);
+  --verdict-block-mark: var(--palette-shu);
+  --verdict-block-wash: var(--palette-shu-wash);
+  --verdict-block-ink: var(--palette-white);
+
+  /* Non-verdict states */
+  --state-live: var(--palette-rokusho);
+  --state-warn: var(--palette-yamabuki-mark);
+  --state-error: var(--palette-shu);
+  --state-error-wash: var(--palette-shu-wash);
+  --state-pending: var(--palette-slate);
+
+  --fixture: var(--palette-violet);
+  --fixture-deep: var(--palette-violet-deep);
+  --fixture-ink: var(--palette-white);
+
+  --overlay: rgba(16, 27, 43, 0.52);
+
+  /* On the inverse (ink) surface: the demo bar */
+  --inverse-border: rgba(255, 255, 255, 0.3);
+  --inverse-hover: rgba(255, 255, 255, 0.1);
+  --inverse-muted: #b9c3d1;
+  --inverse-error: #ffb4a6;
+
+  /* ---------- Type ---------- */
+  --font-heading: "Inter Tight", system-ui, sans-serif;
+  --weight-heading: 760;
+  --font-sans: "Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", system-ui,
+    -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono Variable", "Atkinson Hyperlegible Mono", ui-monospace,
+    "SF Mono", Menlo, Consolas, monospace;
+  /* The seal face: kanji in the checkpoint stamps only. */
+  --font-seal: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", "Noto Serif CJK JP",
+    serif;
+
+  --text-label: 14px; /* uppercase eyebrow labels only */
+  --text-sm: 15px; /* the smallest reading size */
+  --text-body: 17px;
+  --text-lg: 19px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-kpi: 36px;
+  --text-hero: 48px;
+
+  --weight-regular: 400;
+  --weight-medium: 520;
+  --weight-semibold: 640;
+  --weight-bold: 760;
+  --weight-heavy: 800;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-body: 1.5;
+  --tracking-label: 0.08em;
+  --tracking-seal: 0.14em;
+
+  /* ---------- Space ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+
+  /* ---------- Shape ---------- */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --border-width: 1px;
+  --border-width-strong: 2px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-card: 0 2px 8px rgba(6, 18, 52, 0.035);
+  --shadow-raised: 0 6px 20px rgba(16, 27, 43, 0.12), 0 1px 3px rgba(16, 27, 43, 0.08);
+  --shadow-modal: 0 24px 64px rgba(16, 27, 43, 0.28);
+
+  /* ---------- Motion ---------- */
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --dur-slow: 420ms;
+  --dur-highlight: 2400ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-stamp: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---------- Layout ---------- */
+  --page-max: 1400px;
+  --gutter: 24px;
+  --topbar-height: 60px;
+  --demo-bar-height: 56px;
+  --z-sticky: 20;
+  --z-demo-bar: 30;
+  --z-toast: 40;
+  --z-modal: 50;
+
+  /* ---------- Data viz ---------- */
+  --bar-thickness: 12px;
+  --bar-radius: 4px;
+  --chart-track: var(--palette-mist-faint);
+  --chart-mark: var(--palette-ai);
+  --scrollbar-thumb: var(--border-strong);
+  --scrollbar-track: var(--surface-sunken);
+  --scrollbar-hover: var(--muted);
+  --scrollbar-active: var(--accent);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --gutter: 16px;
+    --text-kpi: 30px;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "window": "since_reset",
+  "screened": 10,
+  "allow": 3,
+  "hold": 4,
+  "block": 3,
+  "value_screened_usd": 25.45,
+  "value_held_usd": 0.2,
+  "value_blocked_usd": 25.1,
+  "latency_ms_p50": 2050,
+  "latency_ms_p95": 3090,
+  "intercepta_calls_used": 212,
+  "intercepta_quota": 1000,
+  "attestations_confirmed": 9
+}

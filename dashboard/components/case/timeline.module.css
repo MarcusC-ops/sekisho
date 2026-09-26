@@ -1,0 +1,312 @@
+/*
+ * The decision timeline: a road through the checkpoint. The line's style encodes whether
+ * money moved: solid into settlement (ALLOW), dashed into escrow (HOLD), and a stop marker
+ * at the gate (BLOCK). The attestation hangs off a dotted record line.
+ */
+.timeline {
+  position: relative;
+  display: grid;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: var(--space-3) var(--space-4);
+  padding-bottom: var(--space-5);
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+/* the line from this step's node to the next */
+.step::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  bottom: 0;
+  left: 17px;
+  width: 4px;
+  background: var(--line, var(--border-strong));
+}
+
+.step[data-line="none"]::before,
+.step:last-child::before {
+  display: none;
+}
+
+.step[data-line="tone"]::before {
+  background: var(--tone-mark);
+}
+
+.step[data-line="dashed"]::before {
+  background: repeating-linear-gradient(to bottom, var(--tone-mark) 0 8px, transparent 8px 14px);
+}
+
+.step[data-line="dotted"]::before {
+  left: 18px;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom, var(--border-strong) 0 3px, transparent 3px 8px);
+}
+
+.node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2.5px solid var(--node, var(--accent));
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--node, var(--accent));
+}
+
+.step[data-state="error"] {
+  --node: var(--state-error);
+}
+
+.step[data-state="skipped"],
+.step[data-state="pending"] {
+  --node: var(--border-strong);
+}
+
+.step[data-state="pending"] .node {
+  color: var(--muted);
+}
+
+.step[data-state="done"][data-tone] .node,
+.step[data-state="refused"] .node {
+  border-color: var(--tone-solid);
+  background: var(--tone-solid);
+  color: var(--tone-ink);
+}
+
+.step[data-state="refused"] .node {
+  border-radius: var(--radius-sm);
+}
+
+.body {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding-top: 6px;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+}
+
+.title {
+  font-size: var(--text-body);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+}
+
+.tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.ms {
+  margin-left: auto;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--text-body);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-bold);
+  white-space: nowrap;
+}
+
+.meta {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.detail {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
+}
+
+.detail strong {
+  color: var(--text);
+}
+
+.errorText {
+  color: var(--state-error);
+  font-weight: var(--weight-semibold);
+}
+
+/* Parallel checks share one time scale */
+.waterfall {
+  position: relative;
+  height: var(--bar-thickness);
+  margin-top: 4px;
+  border-radius: var(--bar-radius);
+  background: var(--chart-track);
+}
+
+.waterfallFill {
+  height: 100%;
+  border-radius: 0 var(--bar-radius) var(--bar-radius) 0;
+  background: var(--chart-mark);
+}
+
+.step[data-state="error"] .waterfallFill {
+  background: repeating-linear-gradient(45deg, var(--state-error) 0 6px, var(--state-error-wash) 6px 10px);
+}
+
+.group {
+  position: relative;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-bottom: var(--space-3);
+}
+
+.group::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 17px;
+  width: 4px;
+  background: var(--border-strong);
+}
+
+.groupHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: 6px var(--space-3);
+  border-radius: var(--radius-xs);
+  background: var(--surface-sunken);
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.scale {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- The gate: a barrier across the road ---------- */
+.gate {
+  position: relative;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: var(--space-4);
+  margin: var(--space-1) calc(-1 * var(--space-3)) var(--space-5);
+  padding: var(--space-4) var(--space-3);
+  border-top: 4px solid var(--tone-mark);
+  border-bottom: 4px solid var(--tone-mark);
+  background: var(--tone-wash);
+}
+
+.gate::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--space-4) + 38px);
+  bottom: calc(-1 * var(--space-5) - 4px);
+  left: calc(var(--space-3) + 17px);
+  width: 4px;
+  background: var(--tone-mark);
+}
+
+.gate[data-line="dashed"]::before {
+  background: repeating-linear-gradient(to bottom, var(--tone-mark) 0 8px, transparent 8px 14px);
+}
+
+.gateNode {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--tone-solid);
+  color: var(--tone-ink);
+}
+
+.gateTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+}
+
+.gateVerdict {
+  color: var(--tone);
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.04em;
+}
+
+.gateReasons {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.rules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.rule {
+  padding: 1px 7px;
+  border: var(--border-width) solid var(--tone-mark);
+  border-radius: var(--radius-xs);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 720px) {
+  .step,
+  .group,
+  .gate {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .node,
+  .gateNode {
+    width: 32px;
+    height: 32px;
+  }
+
+  .step::before,
+  .group::before {
+    left: 14px;
+    top: 32px;
+  }
+
+  .group::before {
+    top: 0;
+  }
+
+  .gate::before {
+    left: calc(var(--space-3) + 14px);
+    top: calc(var(--space-4) + 32px);
+  }
+
+  .ms,
+  .meta {
+    margin-left: 0;
+  }
+}

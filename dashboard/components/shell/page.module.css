@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.titles {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 780px;
+}
+
+.eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-heading);
+  letter-spacing: -0.015em;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: var(--text-body);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.caption {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+/* A quiet editorial header keeps operational data in the foreground. */
+.header { padding: var(--space-6); border: var(--border-width) solid var(--border); border-radius: var(--radius-lg); background: var(--brand-header); }
+.title { font-size: var(--text-kpi); letter-spacing: -0.035em; }
+.eyebrow { color: var(--accent-strong); }
+@media (max-width: 720px) { .header { padding: var(--space-4); } }
+@media (forced-colors: active) { .header { background: Canvas; } }

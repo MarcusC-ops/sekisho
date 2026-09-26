@@ -1,0 +1,408 @@
+/* ---------- KPI strip: one tally board, seven figures ---------- */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  margin-bottom: var(--space-6);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.kpi {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  min-width: 0;
+  padding: var(--space-4) var(--space-5) var(--space-4);
+  border-left: var(--border-width) solid var(--hairline);
+}
+
+.kpi:first-child {
+  border-left: 0;
+}
+
+.kpi[data-tone]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--tone-mark);
+}
+
+.kpiLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+}
+
+.kpiLabel svg {
+  color: var(--tone, var(--muted));
+}
+
+.kpiValue {
+  color: var(--text);
+  font-size: var(--text-kpi);
+  font-weight: var(--weight-semibold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.kpiValueUnit {
+  color: var(--muted);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0;
+}
+
+.kpiSub {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kpiMeter {
+  padding-top: 8px;
+}
+
+.kpiError {
+  margin: calc(-1 * var(--space-4)) 0 var(--space-5);
+  color: var(--state-error);
+  font-size: var(--text-sm);
+}
+
+/* ---------- Layout ---------- */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.rail {
+  position: sticky;
+  top: calc(var(--topbar-height) + var(--space-6));
+  display: grid;
+  gap: var(--space-5);
+}
+
+.withDemoBar {
+  padding-bottom: calc(var(--demo-bar-height) + var(--space-8));
+}
+
+/* ---------- Feed ---------- */
+.feedHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.feedTitle {
+  font-size: var(--text-xl);
+}
+
+.feedMeta {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.feed {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.feedState {
+  border: var(--border-width) dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+/* ---------- Decision card ---------- */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6px minmax(0, 1fr);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-raised);
+}
+
+.card:has(.stretched:focus-visible) {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.cardRail {
+  background: var(--tone-mark);
+}
+
+.cardBody {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-4) var(--space-5);
+}
+
+.cardTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.amount {
+  margin-left: auto;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.headline {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-snug);
+}
+
+.stretched {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.stretched:hover {
+  color: var(--accent);
+}
+
+.stretched:focus-visible {
+  outline: none;
+}
+
+.stretched::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.reasons {
+  display: grid;
+  gap: 4px;
+  font-size: var(--text-sm);
+}
+
+.clear {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.clear svg {
+  color: var(--verdict-allow);
+}
+
+.cardFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  padding-top: var(--space-1);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.footItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.footSpacer {
+  flex: 1;
+}
+
+.label {
+  color: var(--fixture);
+  font-weight: var(--weight-bold);
+}
+
+.card[data-fresh="true"] {
+  animation:
+    arrive var(--dur-slow) var(--ease-out) both,
+    glow var(--dur-highlight) var(--ease-out) both;
+}
+
+.card[data-fresh="true"] .stampOnArrive {
+  display: inline-flex;
+  animation: stampIn var(--dur-slow) var(--ease-stamp) 120ms both;
+}
+
+.stampOnArrive {
+  display: inline-flex;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes glow {
+  0%,
+  35% {
+    box-shadow: 0 0 0 3px var(--tone-mark), var(--shadow-raised);
+  }
+  100% {
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@keyframes stampIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) rotate(-6deg);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* ---------- Rail panels ---------- */
+.railList {
+  display: grid;
+}
+
+.railItem {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--space-1) var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-5);
+  border-top: var(--border-width) solid var(--hairline);
+}
+
+.railItem:first-child {
+  border-top: 0;
+}
+
+.railIcon {
+  color: var(--tone, var(--accent));
+}
+
+.railMain {
+  display: grid;
+  min-width: 0;
+}
+
+.railTitle {
+  overflow: hidden;
+  font-weight: var(--weight-semibold);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.railMeta {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.railEmpty {
+  padding: var(--space-5);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 1240px) {
+  .kpis {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .kpi:nth-child(5) {
+    border-left: 0;
+  }
+
+  .kpi:nth-child(n + 5) {
+    border-top: var(--border-width) solid var(--hairline);
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rail {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kpi:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .kpi:nth-child(5) {
+    border-left: 0;
+  }
+
+  .kpi:nth-child(n + 3) {
+    border-top: var(--border-width) solid var(--hairline);
+  }
+
+  .kpi:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .cardBody {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .amount {
+    margin-left: 0;
+  }
+}
+
+/* Shared verdict washes enrich the tally without changing status semantics. */
+.kpi[data-tone] { background: var(--tone-wash); }
+.kpiValue { font-family: var(--font-heading); font-weight: var(--weight-heavy); }
+.cardBody { background: linear-gradient(100deg, var(--tone-wash, var(--surface)), var(--surface) 45%); }
+@media (forced-colors: active) { .kpi[data-tone], .cardBody { background: Canvas; } }

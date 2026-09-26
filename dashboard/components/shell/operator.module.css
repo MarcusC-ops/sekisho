@@ -1,0 +1,35 @@
+.session {
+  position: relative;
+  font-size: var(--text-sm);
+}
+
+.session summary {
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.panel {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 20;
+  width: min(300px, 85vw);
+  padding: var(--space-4);
+  background: var(--surface);
+  color: var(--text);
+  border: var(--border-width) solid var(--hairline);
+  box-shadow: var(--shadow-raised);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.panel input {
+  min-width: 0;
+  padding: var(--space-2);
+  border: var(--border-width) solid var(--hairline);
+  border-radius: var(--radius-sm);
+}
+
+.panel p {
+  margin: 0;
+}

@@ -1,0 +1,30 @@
+{
+  "_comment": "Fixture scenario templates: the console clones these to simulate new cases. UI development only.",
+  "addresses": {
+    "buyer": "0x0C5c7C4B513CbBBF1469c040c9Cc9E0f55461888",
+    "officer": "0x79E83849BD2B3c6eDFBdA174e149964d46cAf33B",
+    "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+    "escrow": "0xa879ac91F2eb6F17ED480f3d9fB873ACdb318021"
+  },
+  "templates": {
+    "S1": [
+      "cs_01M3EJJRJ01C708ETEXE304SP3",
+      "cs_01M3EJJVFR5M7698GJHH0WXW73"
+    ],
+    "S3": [
+      "cs_01M3EJS3P0RSF4QD464WC2Y2Y0"
+    ],
+    "S2": [
+      "cs_01M3EJZ8YGSX35JSX09ZQC0XHG"
+    ],
+    "S4": [
+      "cs_01M3EK7ENG97QD5ZX461KAKVJS"
+    ],
+    "S5": [
+      "cs_01M3EKC618CV3429DWQNBKHZYP"
+    ],
+    "S6": [
+      "cs_01M3EKJ4F0QA9KRBQBCGJ30J11"
+    ]
+  }
+}

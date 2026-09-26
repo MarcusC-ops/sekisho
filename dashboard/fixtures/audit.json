@@ -1,0 +1,282 @@
+[
+  {
+    "event_uid": "0x50db59522b41b96554c7f7e10be4c0dd558b063737529cc11a3d4a32ab5e23b4:2",
+    "name": "Held",
+    "contract_alias": "compliance_escrow",
+    "tx_hash": "0x50db59522b41b96554c7f7e10be4c0dd558b063737529cc11a3d4a32ab5e23b4",
+    "block_number": 31457953,
+    "log_index": 2,
+    "inputs": {
+      "holdId": 4,
+      "caseId": "0x9e8ba324f5342e3676cf45929e6214411c7a8146c1a1d7d00db8c9134c0dcd16",
+      "payer": "0x0C5c7C4B513CbBBF1469c040c9Cc9E0f55461888",
+      "payee": "0xf655B129721E60Df1BB673e9eEfE117249603DF7",
+      "amount": 50000
+    },
+    "case_id": "cs_01M3EKJ4F0QA9KRBQBCGJ30J11",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x50db59522b41b96554c7f7e10be4c0dd558b063737529cc11a3d4a32ab5e23b4",
+    "received_at": "2026-09-26T10:18:28Z"
+  },
+  {
+    "event_uid": "0x90985aa4c952be0bc7fe9f3e178430ea4d3d1c150f96b472526eed2265bc59f4:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x90985aa4c952be0bc7fe9f3e178430ea4d3d1c150f96b472526eed2265bc59f4",
+    "block_number": 31457952,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0xf655B129721E60Df1BB673e9eEfE117249603DF7",
+      "verdict": 2,
+      "riskScore": 50,
+      "reportHash": "0xe062b98bd8d0242bacffe27333b8616ee2decf33aea9f31f78128c50d23fa97a",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1790504304,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0x9e8ba324f5342e3676cf45929e6214411c7a8146c1a1d7d00db8c9134c0dcd16"
+    },
+    "case_id": "cs_01M3EKJ4F0QA9KRBQBCGJ30J11",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x90985aa4c952be0bc7fe9f3e178430ea4d3d1c150f96b472526eed2265bc59f4",
+    "received_at": "2026-09-26T10:18:25Z"
+  },
+  {
+    "event_uid": "0xcf1754272768302957f7b3cb6dd4f9f0058d301525bc87c54eb05adf422e79fb:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0xcf1754272768302957f7b3cb6dd4f9f0058d301525bc87c54eb05adf422e79fb",
+    "block_number": 31457854,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0xa0e1c89Ef1a489c9C7dE96311eD5Ce5D32c20E4B",
+      "verdict": 3,
+      "riskScore": 100,
+      "reportHash": "0xe392ad23a4457888c7437bb668a6b87175201886a80e6b2a61c4bb0ffa60ff6c",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1821953709,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0x9d5729ac1147514aab3ca87e86106238b192a8352910b64e00dace5b83e87b4e"
+    },
+    "case_id": "cs_01M3EKC618CV3429DWQNBKHZYP",
+    "explorer_url": "https://sepolia.basescan.org/tx/0xcf1754272768302957f7b3cb6dd4f9f0058d301525bc87c54eb05adf422e79fb",
+    "received_at": "2026-09-26T10:15:10Z"
+  },
+  {
+    "event_uid": "0x5b497c4eecc4cbc2d656a2e3de7bce2646ef8f70d64ecdbdeddfc79b6aa515a2:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x5b497c4eecc4cbc2d656a2e3de7bce2646ef8f70d64ecdbdeddfc79b6aa515a2",
+    "block_number": 31457777,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "verdict": 3,
+      "riskScore": 100,
+      "reportHash": "0x37acb0a6da338fcec0234a4927e8f20c0e296ab5abda143ecb0eec1abb2ed1de",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1821953554,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0x8fd2b3100b9ba31d3458fffbf8f09fd078a634df34cbc7ca60db872d97e4e303"
+    },
+    "case_id": "cs_01M3EK7ENG97QD5ZX461KAKVJS",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x5b497c4eecc4cbc2d656a2e3de7bce2646ef8f70d64ecdbdeddfc79b6aa515a2",
+    "received_at": "2026-09-26T10:12:35Z"
+  },
+  {
+    "event_uid": "0x9ca4654851837440a7493d3c080514c2b3c5f09ae5b562ec3ec793cc83eda866:2",
+    "name": "Held",
+    "contract_alias": "compliance_escrow",
+    "tx_hash": "0x9ca4654851837440a7493d3c080514c2b3c5f09ae5b562ec3ec793cc83eda866",
+    "block_number": 31457644,
+    "log_index": 2,
+    "inputs": {
+      "holdId": 3,
+      "caseId": "0x2e20bb0b40a2da1ff0c9e50d84271a31de6fc1e2ac8b8b786ce4c53833bb4fac",
+      "payer": "0x0C5c7C4B513CbBBF1469c040c9Cc9E0f55461888",
+      "payee": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "amount": 50000
+    },
+    "case_id": "cs_01M3EJZ8YGSX35JSX09ZQC0XHG",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x9ca4654851837440a7493d3c080514c2b3c5f09ae5b562ec3ec793cc83eda866",
+    "received_at": "2026-09-26T10:08:10Z"
+  },
+  {
+    "event_uid": "0x00fc9c4318c8ab9552a80bee4e54df191ec386a88979ceff84a5aac98dc6849d:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x00fc9c4318c8ab9552a80bee4e54df191ec386a88979ceff84a5aac98dc6849d",
+    "block_number": 31457643,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "verdict": 2,
+      "riskScore": 60,
+      "reportHash": "0xa0b606e92a0b1c3bbd64d4396ef6ea8f46bc5f6c4541369f1560261060ed0bb0",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1790503686,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0x2e20bb0b40a2da1ff0c9e50d84271a31de6fc1e2ac8b8b786ce4c53833bb4fac"
+    },
+    "case_id": "cs_01M3EJZ8YGSX35JSX09ZQC0XHG",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x00fc9c4318c8ab9552a80bee4e54df191ec386a88979ceff84a5aac98dc6849d",
+    "received_at": "2026-09-26T10:08:07Z"
+  },
+  {
+    "event_uid": "0x5e7fed96efacbdf3dd4ebc758c44e48ada300ccb7c861f3c7ecd3443cf8626d0:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x5e7fed96efacbdf3dd4ebc758c44e48ada300ccb7c861f3c7ecd3443cf8626d0",
+    "block_number": 31457542,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "verdict": 3,
+      "riskScore": 100,
+      "reportHash": "0xd053f76675545956b77805445401d117dd61d79606b857253e425b8eb45a4783",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1821953084,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0x4c62f8759cfee196deb81fd85d6b5cb8df310a4f1e4926d7af84275928da5f7f"
+    },
+    "case_id": "cs_01M3EJS3P0RSF4QD464WC2Y2Y0",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x5e7fed96efacbdf3dd4ebc758c44e48ada300ccb7c861f3c7ecd3443cf8626d0",
+    "received_at": "2026-09-26T10:04:45Z"
+  },
+  {
+    "event_uid": "0x47c07be7fb2e48e8e293a86968149664adfbdd18c563cf0e6bf0476facbdad1c:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x47c07be7fb2e48e8e293a86968149664adfbdd18c563cf0e6bf0476facbdad1c",
+    "block_number": 31457439,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0x0C5c7C4B513CbBBF1469c040c9Cc9E0f55461888",
+      "verdict": 1,
+      "riskScore": 0,
+      "reportHash": "0xd36033c2a20f523ea1c38d63d01e53dba5080e0d35ef24ac9f3be2ea78bb18eb",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1790503279,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0xb006de80c10fad17ca3fbf7bbbd466f51e969c1b0d8c36f07d40c7ef0f2d874b"
+    },
+    "case_id": "cs_01M3EJJVFR5M7698GJHH0WXW73",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x47c07be7fb2e48e8e293a86968149664adfbdd18c563cf0e6bf0476facbdad1c",
+    "received_at": "2026-09-26T10:01:20Z"
+  },
+  {
+    "event_uid": "0x20dd9521717544430c407deb7df28c440bafa291cd54fc548b25dfa76dc993be:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x20dd9521717544430c407deb7df28c440bafa291cd54fc548b25dfa76dc993be",
+    "block_number": 31457438,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0xf655B129721E60Df1BB673e9eEfE117249603DF7",
+      "verdict": 1,
+      "riskScore": 4,
+      "reportHash": "0x5db0bacd23185d638f010b6628b774110a093625301431f6797e919a17dbe54f",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1790503276,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0x553c39519614daba7c5dbb9073afce549607958b1e58e9ccc0ba8f391cd142c8"
+    },
+    "case_id": "cs_01M3EJJRJ01C708ETEXE304SP3",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x20dd9521717544430c407deb7df28c440bafa291cd54fc548b25dfa76dc993be",
+    "received_at": "2026-09-26T10:01:17Z"
+  },
+  {
+    "event_uid": "0xfd78da369ca73b876429748dbf4a295859b0daf62035d5a33c9b9767de84b77f:1",
+    "name": "Released",
+    "contract_alias": "compliance_escrow",
+    "tx_hash": "0xfd78da369ca73b876429748dbf4a295859b0daf62035d5a33c9b9767de84b77f",
+    "block_number": 31453578,
+    "log_index": 1,
+    "inputs": {
+      "holdId": 2,
+      "caseId": "0xbf7ba2d2b53082b3025fb1079923aa3e6bde0fb6fae038b67256dceec88797b1",
+      "payee": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "amount": 50000,
+      "officer": "0x79E83849BD2B3c6eDFBdA174e149964d46cAf33B"
+    },
+    "case_id": "cs_01M3EAGGWGD24GXP6TQ9ECQZXJ",
+    "explorer_url": "https://sepolia.basescan.org/tx/0xfd78da369ca73b876429748dbf4a295859b0daf62035d5a33c9b9767de84b77f",
+    "received_at": "2026-09-26T07:52:38Z"
+  },
+  {
+    "event_uid": "0xc3a38692023942e2ad73080598631f572627d5c4969c957458a90ffab1fca3be:0",
+    "name": "VerdictOverridden",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0xc3a38692023942e2ad73080598631f572627d5c4969c957458a90ffab1fca3be",
+    "block_number": 31453575,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "previous": 2,
+      "next": 1,
+      "noteHash": "0xd39153a6271172f0479c25745bb7b027c74edc14b0cc13fbd9b3effdfd0f75a0",
+      "officer": "0x79E83849BD2B3c6eDFBdA174e149964d46cAf33B",
+      "caseId": "0xbf7ba2d2b53082b3025fb1079923aa3e6bde0fb6fae038b67256dceec88797b1"
+    },
+    "case_id": "cs_01M3EAGGWGD24GXP6TQ9ECQZXJ",
+    "explorer_url": "https://sepolia.basescan.org/tx/0xc3a38692023942e2ad73080598631f572627d5c4969c957458a90ffab1fca3be",
+    "received_at": "2026-09-26T07:52:32Z"
+  },
+  {
+    "event_uid": "0xbd702e73153184b0ed6a2cd477bebf51d9e544003f8799b9b05b68fffbf36db9:2",
+    "name": "Held",
+    "contract_alias": "compliance_escrow",
+    "tx_hash": "0xbd702e73153184b0ed6a2cd477bebf51d9e544003f8799b9b05b68fffbf36db9",
+    "block_number": 31453208,
+    "log_index": 2,
+    "inputs": {
+      "holdId": 2,
+      "caseId": "0xbf7ba2d2b53082b3025fb1079923aa3e6bde0fb6fae038b67256dceec88797b1",
+      "payer": "0x0C5c7C4B513CbBBF1469c040c9Cc9E0f55461888",
+      "payee": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "amount": 50000
+    },
+    "case_id": "cs_01M3EAGGWGD24GXP6TQ9ECQZXJ",
+    "explorer_url": "https://sepolia.basescan.org/tx/0xbd702e73153184b0ed6a2cd477bebf51d9e544003f8799b9b05b68fffbf36db9",
+    "received_at": "2026-09-26T07:40:18Z"
+  },
+  {
+    "event_uid": "0x8b065f80d89e70134aac7e010e111255eec298df95b18acb89149fa820e076d8:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x8b065f80d89e70134aac7e010e111255eec298df95b18acb89149fa820e076d8",
+    "block_number": 31453207,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "verdict": 2,
+      "riskScore": 60,
+      "reportHash": "0x7617867a407af8f188cba30ba6e93b0e112486e19d316e7729104237e9c59609",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1790494814,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0xbf7ba2d2b53082b3025fb1079923aa3e6bde0fb6fae038b67256dceec88797b1"
+    },
+    "case_id": "cs_01M3EAGGWGD24GXP6TQ9ECQZXJ",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x8b065f80d89e70134aac7e010e111255eec298df95b18acb89149fa820e076d8",
+    "received_at": "2026-09-26T07:40:15Z"
+  },
+  {
+    "event_uid": "0x2784f277b42757779fa18e1c44808de6d94224b677bdf203e442d718c32abd54:0",
+    "name": "Screened",
+    "contract_alias": "compliance_registry",
+    "tx_hash": "0x2784f277b42757779fa18e1c44808de6d94224b677bdf203e442d718c32abd54",
+    "block_number": 31452364,
+    "log_index": 0,
+    "inputs": {
+      "subject": "0xf655B129721E60Df1BB673e9eEfE117249603DF7",
+      "verdict": 1,
+      "riskScore": 4,
+      "reportHash": "0x4df00227258c95dafc1b5982c6b9575d06b71110ebc9ff5cd5259d0d1b26f1ab",
+      "policyId": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+      "expiresAt": 1790493128,
+      "screener": "0x49F75Fd80d9dCFd1991F0C7EC1c4C60bdBe46113",
+      "caseId": "0x18f233ff2641b1a5afba4cac1d1f4f418cd03c18b6fa23e483f7ca52db358ada"
+    },
+    "case_id": "cs_01M3E8X2D0TEF3RQ67W5PXV87Z",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x2784f277b42757779fa18e1c44808de6d94224b677bdf203e442d718c32abd54",
+    "received_at": "2026-09-26T07:12:09Z"
+  }
+]

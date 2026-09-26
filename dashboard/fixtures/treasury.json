@@ -1,0 +1,82 @@
+{
+  "buyer_address": "0x0C5c7C4B513CbBBF1469c040c9Cc9E0f55461888",
+  "buyer_usdc": "4750000",
+  "buyer_usdc_usd": 4.75,
+  "escrow_address": "0xa879ac91F2eb6F17ED480f3d9fB873ACdb318021",
+  "escrow_total_held": "100000",
+  "escrow_total_held_usd": 0.1,
+  "paid_via_x402_usd": 0.1,
+  "value_blocked_usd": 25.1,
+  "exposure_by_payee": [
+    {
+      "payee": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "total": "100000",
+      "total_usd": 0.1
+    },
+    {
+      "payee": "0xf655B129721E60Df1BB673e9eEfE117249603DF7",
+      "total": "50000",
+      "total_usd": 0.05
+    }
+  ],
+  "released_by_payee": [
+    {
+      "payee": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "total": "50000",
+      "total_usd": 0.05
+    }
+  ],
+  "counterparty_book": [
+    {
+      "counterparty": "0xf655B129721E60Df1BB673e9eEfE117249603DF7",
+      "latest_verdict": "HOLD",
+      "last_screened_at": "2026-09-26T10:18:20Z",
+      "total_paid_usd": 0.1,
+      "total_held_usd": 0.05,
+      "cases": 3
+    },
+    {
+      "counterparty": "0xa0e1c89Ef1a489c9C7dE96311eD5Ce5D32c20E4B",
+      "latest_verdict": "BLOCK",
+      "last_screened_at": "2026-09-26T10:15:05Z",
+      "total_paid_usd": 0,
+      "total_held_usd": 0,
+      "cases": 1
+    },
+    {
+      "counterparty": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "latest_verdict": "BLOCK",
+      "last_screened_at": "2026-09-26T10:12:30Z",
+      "total_paid_usd": 0,
+      "total_held_usd": 0,
+      "cases": 2
+    },
+    {
+      "counterparty": "0xb1B67fbd5c1404c6c11f9195fEbd52768Db0A207",
+      "latest_verdict": "HOLD",
+      "last_screened_at": "2026-09-26T10:08:02Z",
+      "total_paid_usd": 0.05,
+      "total_held_usd": 0.05,
+      "cases": 2
+    },
+    {
+      "counterparty": "0x0C5c7C4B513CbBBF1469c040c9Cc9E0f55461888",
+      "latest_verdict": "ALLOW",
+      "last_screened_at": "2026-09-26T10:01:15Z",
+      "total_paid_usd": 0,
+      "total_held_usd": 0,
+      "cases": 1
+    },
+    {
+      "counterparty": "0x68b626a55F420E25F4A14aA2ceFb7920BBE429c6",
+      "latest_verdict": "HOLD",
+      "last_screened_at": "2026-09-26T09:02:44Z",
+      "total_paid_usd": 0,
+      "total_held_usd": 0,
+      "cases": 1
+    }
+  ],
+  "source": "multibaas",
+  "cached_at": "2026-09-26T10:18:40Z",
+  "errors": []
+}

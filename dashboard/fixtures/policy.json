@@ -1,0 +1,77 @@
+{
+  "id": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+  "version": "1.0.0",
+  "name": "sekisho-demo-policy",
+  "yaml": "# Sekisho demo policy. Deterministic: the same evidence always gives the same verdict.\n# policy_id = keccak256(bytes of this file). Changing ANY byte changes the policy id.\n# This is a demo policy for a hackathon, not legal advice or a certified AML programme.\nname: sekisho-demo-policy\nversion: \"1.0.0\"\ndescription: >\n  Demo KYT policy for AI agent payments at a bank treasury. Blocks sanctioned and\n  known-criminal counterparties, holds mixer or sanctions exposure for human review,\n  and allows the rest.\n\nverdict_ttl_seconds:\n  allow: 86400          # re-screen a cleared counterparty after 24 h\n  hold: 86400\n  block: 31536000       # 1 year (blocks do not expire onchain anyway)\nofficer_clear_ttl_seconds: 3600\n\nthresholds:\n  block_score: 80       # Intercepta toxicScore at or above this -> BLOCK\n  hold_score: 40        # at or above this -> HOLD\n  taint_block_pct: 50   # share of traced inbound value from flagged sources -> BLOCK\n  taint_hold_pct: 10    # -> HOLD\n  first_time_max_usd: 25  # first payment to a new counterparty above this -> HOLD\n\n# Intercepta trait names (show the API's own description text in the UI)\nhard_block_traits:\n  - sanction_address\n  - known_scammer\n  - initiator_scam_transactions\n  - blacklist\n\nhold_traits:\n  - sanction_address_communication\n  - mixer_transfers\n  - non_kyc_transfers\n  - fake_phishing_contract_communication\n  - attack_money_target\n  - rug_pull\n  - rug_pull_trader\n  - suspicious_deployer\n  - suspicious_dex_pair_deployer\n\n# Shown as information only. These usually mean the wallet RECEIVED spam or\n# poisoning dust (it was a target), which should not penalise it.\ninfo_traits:\n  - fake_phishing_transfer\n  - zero_address_risk\n\nother_rules:\n  sanctions_oracle_hit: BLOCK\n  address_poisoned: BLOCK\n  token_action_block: BLOCK\n  token_action_warn: HOLD\n  screening_error: HOLD   # fail closed: never ALLOW on missing data\n\ntrace:\n  chains: [1, 8453]\n  inbound_page_size: 50\n  top_k_hop1: 5\n  top_k_hop2: 3\n  hop2_weight: 0.5\n  label_keywords: [tornado, mixer, exploit, hack, phish, lazarus, drainer]\n  stablecoins: [USDC, USDT, DAI, USDbC]\n",
+  "parsed": {
+    "name": "sekisho-demo-policy",
+    "version": "1.0.0",
+    "description": "Demo KYT policy for AI agent payments at a bank treasury. Blocks sanctioned and known-criminal counterparties, holds mixer or sanctions exposure for human review, and allows the rest.\n",
+    "verdict_ttl_seconds": {
+      "allow": 86400,
+      "hold": 86400,
+      "block": 31536000
+    },
+    "officer_clear_ttl_seconds": 3600,
+    "thresholds": {
+      "block_score": 80,
+      "hold_score": 40,
+      "taint_block_pct": 50,
+      "taint_hold_pct": 10,
+      "first_time_max_usd": 25
+    },
+    "hard_block_traits": [
+      "sanction_address",
+      "known_scammer",
+      "initiator_scam_transactions",
+      "blacklist"
+    ],
+    "hold_traits": [
+      "sanction_address_communication",
+      "mixer_transfers",
+      "non_kyc_transfers",
+      "fake_phishing_contract_communication",
+      "attack_money_target",
+      "rug_pull",
+      "rug_pull_trader",
+      "suspicious_deployer",
+      "suspicious_dex_pair_deployer"
+    ],
+    "info_traits": [
+      "fake_phishing_transfer",
+      "zero_address_risk"
+    ],
+    "other_rules": {
+      "sanctions_oracle_hit": "BLOCK",
+      "address_poisoned": "BLOCK",
+      "token_action_block": "BLOCK",
+      "token_action_warn": "HOLD",
+      "screening_error": "HOLD"
+    },
+    "trace": {
+      "chains": [
+        1,
+        8453
+      ],
+      "inbound_page_size": 50,
+      "top_k_hop1": 5,
+      "top_k_hop2": 3,
+      "hop2_weight": 0.5,
+      "label_keywords": [
+        "tornado",
+        "mixer",
+        "exploit",
+        "hack",
+        "phish",
+        "lazarus",
+        "drainer"
+      ],
+      "stablecoins": [
+        "USDC",
+        "USDT",
+        "DAI",
+        "USDbC"
+      ]
+    }
+  }
+}

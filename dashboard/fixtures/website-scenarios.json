@@ -1,0 +1,6 @@
+[
+  {"id":"clean","label":"Clean wallet","case_id":"cs_01M3EJJVFR5M7698GJHH0WXW73","outcome":"The agent may proceed to signing under this example policy. ALLOW is a point-in-time verdict, not a guarantee of safety or settlement."},
+  {"id":"mixer","label":"Mixer exposure","case_id":"cs_01M3EJZ8YGSX35JSX09ZQC0XHG","outcome":"In this example, the buyer deposits 0.05 USDC into escrow instead of paying the vendor. An officer reviews the evidence before release or refund. Mixer exposure is not the same as sanctions."},
+  {"id":"sanctioned","label":"Sanctioned wallet","case_id":"cs_01M3EKC618CV3429DWQNBKHZYP","outcome":"The agent refuses the payment. No payment signature is created. The blocked decision can still be recorded for audit."},
+  {"id":"unavailable","label":"Screening timeout","case_id":"cs_01M3EKJ4F0QA9KRBQBCGJ30J11","outcome":"Missing screening data cannot produce ALLOW. Pause payment and investigate or retry screening. A passing sanctions check alone is insufficient."}
+]

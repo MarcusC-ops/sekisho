@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "demo_mode": true,
+  "policy": {
+    "id": "0xd55f2a7678cc2571a18073afd351f2fc13ffe4aa9c570632b94a8190f9c14719",
+    "version": "1.0.0"
+  },
+  "checks": {
+    "intercepta": {
+      "ok": true,
+      "detail": "key valid, 212/1000 used"
+    },
+    "oracle_self_test": {
+      "ok": true,
+      "detail": "0x098B…2F96 sanctioned on 1"
+    },
+    "multibaas": {
+      "ok": true,
+      "detail": "reachable"
+    },
+    "contracts_rpc": {
+      "ok": true,
+      "detail": "chain 84532, block 31457960"
+    },
+    "llm": {
+      "ok": true,
+      "detail": "anthropic claude-haiku-4-5"
+    }
+  }
+}
