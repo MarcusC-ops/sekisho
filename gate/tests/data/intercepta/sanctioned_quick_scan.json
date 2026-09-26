@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "SYNTHETIC test fixture built from the documented Intercepta response schema (PRD 9.3; ToxicScoreShortResponseV2 / PoisoningCheck / TokenRiskAnalysisV2Response). It is NOT a captured Intercepta response, and the descriptions are placeholders, not Intercepta text. To swap in a real capture: keep this wrapper, set synthetic=false, fill captured_at and address, and paste the exact body into 'response'.",
+    "endpoint": "GET /api/public/v2/extension/account/{address}/quick-scan",
+    "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96 (S3 profile, synthetic body)",
+    "captured_at": null
+  },
+  "status": 200,
+  "response": {
+    "toxicScore": 100,
+    "traits": [
+      {
+        "name": "sanction_address",
+        "risk": 100,
+        "txsCount": 0,
+        "description": "SYNTHETIC placeholder description for sanction_address."
+      },
+      {
+        "name": "sanction_address_communication",
+        "risk": 90,
+        "txsCount": 12,
+        "description": "SYNTHETIC placeholder description for sanction_address_communication."
+      },
+      {
+        "name": "mixer_transfers",
+        "risk": 70,
+        "txsCount": 4,
+        "description": "SYNTHETIC placeholder description for mixer_transfers."
+      }
+    ]
+  }
+}

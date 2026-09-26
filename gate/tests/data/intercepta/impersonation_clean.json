@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "SYNTHETIC test fixture built from the documented Intercepta response schema (PRD 9.3; ToxicScoreShortResponseV2 / PoisoningCheck / TokenRiskAnalysisV2Response). It is NOT a captured Intercepta response, and the descriptions are placeholders, not Intercepta text. To swap in a real capture: keep this wrapper, set synthetic=false, fill captured_at and address, and paste the exact body into 'response'.",
+    "endpoint": "GET /api/public/v1/extension/poisoning-attack/check-address/{address}",
+    "address": "any (synthetic)",
+    "captured_at": null
+  },
+  "status": 200,
+  "response": {
+    "isAddressPoisoned": false,
+    "originalAddress": null
+  }
+}

@@ -1,0 +1,5 @@
+# Everything the gate, SDK, agents, MCP server and scripts need. Versions are pinned
+# by constraints.txt: pip install -r requirements.txt -c constraints.txt
+-e ./gate[dev]
+-e ./sdk[x402]
+mcp[cli]==2.2.0

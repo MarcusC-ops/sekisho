@@ -1,0 +1,402 @@
+{
+ "items": [
+  {
+   "block_number": 14442840,
+   "log_index": 29,
+   "timestamp": "2022-03-23T13:31:04.000000Z",
+   "transaction_hash": "0xed2c72ef1a552ddaec6dd1f5cddf0b59a8f37f82bdda5257d9c7c37db7bb9b08",
+   "type": "token_transfer",
+   "token_type": "ERC-20",
+   "from": {
+    "hash": "0x1A2a1c938CE3eC39b6D47113c7955bAa9DD454F2",
+    "name": "MainchainGatewayProxy",
+    "ens_domain_name": null,
+    "is_contract": true,
+    "is_scam": false,
+    "reputation": "ok",
+    "public_tags": [],
+    "metadata": {
+     "tags": [
+      {
+       "name": "Ronin Bridge V1",
+       "slug": "ronin-bridge-v1-1",
+       "tagType": "name",
+       "ordinal": 10,
+       "meta": {
+        "main_entity": "Axie Infinity",
+        "projectName": "Ronin Network",
+        "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+        "tagUrl": "https://scout-app.kleros.io/single-tags/0x7eeabbfdecfab673414752f1df7eba7e40d8515d4b52eacd4546a8adadf16764",
+        "textColor": "#C163D4",
+        "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+        "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+        "tooltipDescription": "Contract of Ronin Network's Ronin Bridge V1",
+        "tooltipUrl": "https://roninchain.com/"
+       }
+      },
+      {
+       "name": "Bridge",
+       "slug": "bridge",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {}
+      },
+      {
+       "name": "note_0",
+       "slug": "note0",
+       "tagType": "note",
+       "ordinal": 0,
+       "meta": {
+        "alertStatus": "info",
+        "data": "To deposit assets into the Ronin sidechain, users need to interact with the Ronin smart contract. Simply transferring assets to the contract address will result in permanent loss of funds."
+       }
+      },
+      {
+       "name": "Axie Infinity",
+       "slug": "axie-infinity",
+       "tagType": "protocol",
+       "ordinal": 0,
+       "meta": {}
+      }
+     ]
+    }
+   },
+   "to": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96"
+   },
+   "token": {
+    "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "name": "USDC",
+    "symbol": "USDC",
+    "decimals": "6",
+    "type": "ERC-20",
+    "reputation": "ok"
+   },
+   "total": {
+    "decimals": "6",
+    "value": "25500000000000"
+   }
+  },
+  {
+   "block_number": 23307456,
+   "log_index": 2107,
+   "timestamp": "2025-09-06T23:52:47.000000Z",
+   "transaction_hash": "0x260aa4fa2bcdaab07c50ee89e18aeba1361273fdf09c78d173741462276afa05",
+   "type": "token_transfer",
+   "token_type": "ERC-20",
+   "from": {
+    "hash": "0x985409C0E4B1853A42800765baFcD9EFc1c57D03",
+    "name": "Visit website getether .net to claim rewards",
+    "ens_domain_name": null,
+    "is_contract": true,
+    "is_scam": true,
+    "reputation": "scam",
+    "public_tags": [],
+    "metadata": {
+     "tags": [
+      {
+       "name": "Phish / Hack",
+       "slug": "phish--hack",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {
+        "bgColor": "#FED7D7",
+        "textColor": "#822727"
+       }
+      }
+     ]
+    }
+   },
+   "to": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96"
+   },
+   "token": {
+    "address_hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "name": "WETH",
+    "symbol": "WETH",
+    "decimals": "18",
+    "type": "ERC-20",
+    "reputation": "ok"
+   },
+   "total": {
+    "decimals": "18",
+    "value": "100000000000"
+   }
+  },
+  {
+   "block_number": 16886975,
+   "log_index": 48,
+   "timestamp": "2023-03-23T01:26:23.000000Z",
+   "transaction_hash": "0x64e3afd6b87792f8f4a10096b008c5f6025f0dab1b83877fbee125daf0c64ded",
+   "type": "token_transfer",
+   "token_type": "ERC-20",
+   "from": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+    "name": null,
+    "ens_domain_name": null,
+    "is_contract": false,
+    "is_scam": false,
+    "reputation": "ok",
+    "public_tags": [],
+    "metadata": {
+     "tags": [
+      {
+       "name": "Ronin Bridge Exploiter",
+       "slug": "ronin-bridge-exploiter",
+       "tagType": "name",
+       "ordinal": 10,
+       "meta": {}
+      },
+      {
+       "name": "SANCTIONED",
+       "slug": "sanctioned",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {
+        "info": [
+         "MOF SANCTIONED",
+         "OFAC Sanctioned"
+        ]
+       }
+      },
+      {
+       "name": "BLOCKED",
+       "slug": "blocked",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {
+        "info": [
+         "Blocked By USDC",
+         "Blocked By USDT"
+        ],
+        "tooltipDescription": "Address blocked by a custodial stablecoin provider"
+       }
+      },
+      {
+       "name": "Exploit",
+       "slug": "exploit",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {}
+      },
+      {
+       "name": "note_0",
+       "slug": "note0",
+       "tagType": "note",
+       "ordinal": 0,
+       "meta": {
+        "alertStatus": "info",
+        "data": "This address is reported to be involved in a hack targeting the Ronin bridge."
+       }
+      }
+     ]
+    }
+   },
+   "to": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96"
+   },
+   "token": {
+    "address_hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "name": "WETH",
+    "symbol": "WETH",
+    "decimals": "18",
+    "type": "ERC-20",
+    "reputation": "ok"
+   },
+   "total": {
+    "decimals": "18",
+    "value": "0"
+   }
+  },
+  {
+   "block_number": 14490975,
+   "log_index": 844,
+   "timestamp": "2022-03-31T01:21:03.000000Z",
+   "transaction_hash": "0x0255956527b1f2516782b3d62496dac88513f965f23a3fdcc0a87efa15dc92aa",
+   "type": "token_transfer",
+   "token_type": "ERC-20",
+   "from": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+    "name": null,
+    "ens_domain_name": null,
+    "is_contract": false,
+    "is_scam": false,
+    "reputation": "ok",
+    "public_tags": [],
+    "metadata": {
+     "tags": [
+      {
+       "name": "Ronin Bridge Exploiter",
+       "slug": "ronin-bridge-exploiter",
+       "tagType": "name",
+       "ordinal": 10,
+       "meta": {}
+      },
+      {
+       "name": "SANCTIONED",
+       "slug": "sanctioned",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {
+        "info": [
+         "MOF SANCTIONED",
+         "OFAC Sanctioned"
+        ]
+       }
+      },
+      {
+       "name": "BLOCKED",
+       "slug": "blocked",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {
+        "info": [
+         "Blocked By USDC",
+         "Blocked By USDT"
+        ],
+        "tooltipDescription": "Address blocked by a custodial stablecoin provider"
+       }
+      },
+      {
+       "name": "Exploit",
+       "slug": "exploit",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {}
+      },
+      {
+       "name": "note_0",
+       "slug": "note0",
+       "tagType": "note",
+       "ordinal": 0,
+       "meta": {
+        "alertStatus": "info",
+        "data": "This address is reported to be involved in a hack targeting the Ronin bridge."
+       }
+      }
+     ]
+    }
+   },
+   "to": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96"
+   },
+   "token": {
+    "address_hash": "0xe00a182284098e9c2ba89634544d51B0179c4C92",
+    "name": "Dream Cash",
+    "symbol": "CASH",
+    "decimals": "18",
+    "type": "ERC-20",
+    "reputation": "ok"
+   },
+   "total": {
+    "decimals": "18",
+    "value": "9000000000000000000"
+   }
+  },
+  {
+   "block_number": 14484892,
+   "log_index": 33,
+   "timestamp": "2022-03-30T02:25:22.000000Z",
+   "transaction_hash": "0xf5d2fd25f9a11791c93f8174e1e3f373a4c0fa55d54bb62c1130b69faa45a648",
+   "type": "token_transfer",
+   "token_type": "ERC-20",
+   "from": {
+    "hash": "0x562680a4dC50ed2f14d75BF31f494cfE0b8D10a1",
+    "name": null,
+    "ens_domain_name": null,
+    "is_contract": true,
+    "is_scam": false,
+    "reputation": "ok",
+    "public_tags": [],
+    "metadata": {
+     "tags": [
+      {
+       "name": "Hotbit 9",
+       "slug": "hotbit-9",
+       "tagType": "name",
+       "ordinal": 10,
+       "meta": {
+        "main_entity": "HotBit",
+        "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+        "textColor": "#C163D4",
+        "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+        "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+        "tooltipDescription": "Provided by OLI"
+       }
+      },
+      {
+       "name": "HOT WALLET",
+       "slug": "hot-wallet",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {}
+      },
+      {
+       "name": "Exchange",
+       "slug": "exchange",
+       "tagType": "generic",
+       "ordinal": 0,
+       "meta": {}
+      },
+      {
+       "name": "Hotbit",
+       "slug": "hotbit",
+       "tagType": "protocol",
+       "ordinal": 0,
+       "meta": {}
+      }
+     ]
+    }
+   },
+   "to": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96"
+   },
+   "token": {
+    "address_hash": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
+    "name": "Akita Inu [OLD]",
+    "symbol": "AKITA",
+    "decimals": "18",
+    "type": "ERC-20",
+    "reputation": "ok"
+   },
+   "total": {
+    "decimals": "18",
+    "value": "13300000000000000000000000"
+   }
+  },
+  {
+   "block_number": 25964630,
+   "log_index": 1825,
+   "timestamp": "2026-09-12T23:29:47.000000Z",
+   "transaction_hash": "0xcdcf0d58fdde342e25daa97698a09212ded34e4f3924cada61d192343f37887b",
+   "type": "token_transfer",
+   "token_type": "ERC-20",
+   "from": {
+    "hash": "0x82563465D950423aA9039c753Fc14EAa4467A6b6",
+    "name": "ArgAirdrop",
+    "ens_domain_name": null,
+    "is_contract": true,
+    "is_scam": false,
+    "reputation": "ok",
+    "public_tags": [],
+    "metadata": null
+   },
+   "to": {
+    "hash": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96"
+   },
+   "token": {
+    "address_hash": "0x4f7b01009429154125A0f991F53E812dCcF03333",
+    "name": "there is no meme i love you",
+    "symbol": "ILY",
+    "decimals": "18",
+    "type": "ERC-20",
+    "reputation": "ok"
+   },
+   "total": {
+    "decimals": "18",
+    "value": "50120288692862870890136"
+   }
+  }
+ ],
+ "next_page_params": null
+}

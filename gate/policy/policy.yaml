@@ -1,0 +1,62 @@
+# Sekisho demo policy. Deterministic: the same evidence always gives the same verdict.
+# policy_id = keccak256(bytes of this file). Changing ANY byte changes the policy id.
+# This is a demo policy for a hackathon, not legal advice or a certified AML programme.
+name: sekisho-demo-policy
+version: "1.0.0"
+description: >
+  Demo KYT policy for AI agent payments at a bank treasury. Blocks sanctioned and
+  known-criminal counterparties, holds mixer or sanctions exposure for human review,
+  and allows the rest.
+
+verdict_ttl_seconds:
+  allow: 86400          # re-screen a cleared counterparty after 24 h
+  hold: 86400
+  block: 31536000       # 1 year (blocks do not expire onchain anyway)
+officer_clear_ttl_seconds: 3600
+
+thresholds:
+  block_score: 80       # Intercepta toxicScore at or above this -> BLOCK
+  hold_score: 40        # at or above this -> HOLD
+  taint_block_pct: 50   # share of traced inbound value from flagged sources -> BLOCK
+  taint_hold_pct: 10    # -> HOLD
+  first_time_max_usd: 25  # first payment to a new counterparty above this -> HOLD
+
+# Intercepta trait names (show the API's own description text in the UI)
+hard_block_traits:
+  - sanction_address
+  - known_scammer
+  - initiator_scam_transactions
+  - blacklist
+
+hold_traits:
+  - sanction_address_communication
+  - mixer_transfers
+  - non_kyc_transfers
+  - fake_phishing_contract_communication
+  - attack_money_target
+  - rug_pull
+  - rug_pull_trader
+  - suspicious_deployer
+  - suspicious_dex_pair_deployer
+
+# Shown as information only. These usually mean the wallet RECEIVED spam or
+# poisoning dust (it was a target), which should not penalise it.
+info_traits:
+  - fake_phishing_transfer
+  - zero_address_risk
+
+other_rules:
+  sanctions_oracle_hit: BLOCK
+  address_poisoned: BLOCK
+  token_action_block: BLOCK
+  token_action_warn: HOLD
+  screening_error: HOLD   # fail closed: never ALLOW on missing data
+
+trace:
+  chains: [1, 8453]
+  inbound_page_size: 50
+  top_k_hop1: 5
+  top_k_hop2: 3
+  hop2_weight: 0.5
+  label_keywords: [tornado, mixer, exploit, hack, phish, lazarus, drainer]
+  stablecoins: [USDC, USDT, DAI, USDbC]

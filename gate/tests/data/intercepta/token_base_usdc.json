@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "synthetic": true,
+    "note": "SYNTHETIC test fixture built from the documented Intercepta response schema (PRD 9.3; ToxicScoreShortResponseV2 / PoisoningCheck / TokenRiskAnalysisV2Response). It is NOT a captured Intercepta response, and the descriptions are placeholders, not Intercepta text. To swap in a real capture: keep this wrapper, set synthetic=false, fill captured_at and address, and paste the exact body into 'response'.",
+    "endpoint": "GET /api/public/v2/extension/token-intelligence/token/{address}/risks?chainId=8453",
+    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 (Base USDC, synthetic body)",
+    "captured_at": null
+  },
+  "status": 200,
+  "response": {
+    "apiVersion": "2.3.1",
+    "riskScore": 0,
+    "riskLevel": "neutral",
+    "category": "info",
+    "trust": "whitelist",
+    "action": "info",
+    "detectors": [
+      {
+        "code": "HIGH_REPUTATION_TOKEN",
+        "description": "SYNTHETIC placeholder detector description."
+      }
+    ],
+    "token": {
+      "chainId": "8453",
+      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "symbol": "USDC"
+    },
+    "saleTax": {
+      "currentValue": 0,
+      "minValue": 0,
+      "maxValue": 0
+    },
+    "buyTax": {
+      "currentValue": 0,
+      "minValue": 0,
+      "maxValue": 0
+    }
+  }
+}
