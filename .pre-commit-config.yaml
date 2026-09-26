@@ -1,0 +1,16 @@
+# Keeps agent config in sync with .agents/. Enable once per clone: pre-commit install
+repos:
+  - repo: local
+    hooks:
+      - id: link-agent-skills
+        name: Check .agents/skills symlinks
+        entry: .agents/scripts/link-skills.sh check
+        language: script
+        pass_filenames: false
+        always_run: true  # fast, and also catches deleted skills (deletions never match `files`)
+      - id: check-agent-mcp
+        name: Check generated MCP configs are current
+        entry: .agents/scripts/sync-mcp.sh check
+        language: script
+        pass_filenames: false
+        files: ^(\.agents/mcp/|\.agents/scripts/sync-mcp\.sh$|\.mcp\.json$|\.cursor/mcp\.json$|\.codex/config\.toml$)

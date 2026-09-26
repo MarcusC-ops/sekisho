@@ -1,0 +1,39 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+.next/
+coverage/
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Gate runtime data (SQLite) and scan output
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+scan_results.json
+
+# Foundry build output and local broadcast artifacts
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+
+# Agent skills (machine-local)
+.agents/skills-local/*
+!.agents/skills-local/.gitkeep
+
+# Agent settings (machine-local)
+.claude/settings.local.json
+.claude/worktrees/
+
+# Vercel local project linkage
+.vercel/

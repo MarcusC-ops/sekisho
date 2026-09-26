@@ -1,0 +1,2 @@
+# Hashed byte for byte into policy_id and report hashes: never convert line endings.
+gate/policy/policy.yaml -text
