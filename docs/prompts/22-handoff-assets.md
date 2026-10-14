@@ -14,3 +14,17 @@ Scope: repository files only. No deployment, GitHub setting, Vercel or Render ch
 live trial run, provider call or transaction. Findings that need account access, such as
 the stale Vercel deployment and the empty GitHub metadata, are documented in
 [HANDOFF.md](../HANDOFF.md) rather than changed. No subagents used.
+
+## README restructure
+
+Follow-up, verbatim: "follow the https://github.com/othneildrew/Best-README-Template and
+make sure all is good too".
+
+Plan: restructure the main README into the template's sections (shields, centred logo,
+table of contents, About/Built With, Getting Started, Usage, Roadmap, Contributing,
+License, Contact, Acknowledgments, back-to-top links and reference-style badges) while
+keeping every verified claim, limitation, sponsor explanation and inbound anchor
+(`#run-locally`, `#sponsor-integrations`). Use the recorded trial-evidence panel as the
+product screenshot, add the bug and feature issue templates the template links to, and
+verify badges, external links, anchors and GitHub's rendering. Contact lists only the
+already-confirmed maintainer; no social handles were invented.

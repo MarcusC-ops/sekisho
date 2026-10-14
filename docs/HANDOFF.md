@@ -87,7 +87,11 @@ quota and testnet funds and needs explicit authorisation.
 
 [Asset provenance](assets/README.md) lists every file and how to re-render it. This pass
 added a favicon set, web manifest, Open Graph cards for the homepage and trial page,
-a refreshed repository preview, and PNG logo/lockup exports for slides and forms.
+a refreshed repository preview, PNG logo/lockup exports for slides and forms, and the
+README product screenshot. The README follows
+[Best-README-Template](https://github.com/othneildrew/Best-README-Template); keep its
+`#run-locally` and `#sponsor-integrations` anchors, which the website and submission
+documents link to. Bug and feature issue templates live in `.github/ISSUE_TEMPLATE/`.
 
 ## Open items
 

@@ -76,5 +76,6 @@ and public runner with `main` using read-only requests, and wrote [HANDOFF.md](H
 It rendered the website icons, web manifest, share cards, repository preview and logo
 exports from new HTML sources in `docs/assets/source/`, corrected diagram wording that
 implied HOLD deposits into escrow, and renamed two JPEG screenshots that carried a `.png`
-extension. No deployment, account setting, provider call or transaction was made.
-See [prompt 22](prompts/22-handoff-assets.md).
+extension. It then restructured the README to follow Best-README-Template and added
+GitHub issue templates. No deployment, account setting, provider call or transaction
+was made. See [prompt 22](prompts/22-handoff-assets.md).
