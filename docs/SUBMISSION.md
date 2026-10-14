@@ -1,6 +1,10 @@
 # Submission checklist
 
 Current technical evidence: [LIVE-EVIDENCE.md](LIVE-EVIDENCE.md).
+
+> The deadline below has passed. Unticked boxes record that completion was not written
+> down here, not that a step was skipped. Confirm the submitted entry in the ETHGlobal
+> dashboard; see [HANDOFF.md](HANDOFF.md).
 The product is a verified hosted testnet MVP, not a complete production compliance system.
 
 ## Deadline and delivery

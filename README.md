@@ -1,5 +1,7 @@
 # Sekisho 関所
 
+![Sekisho: a checkpoint for AI payments. ALLOW, HOLD or BLOCK before the agent signs.](docs/assets/social-preview.png)
+
 **A policy checkpoint for AI agent payments, before the signature.**
 
 Sekisho screens the other party in an x402 payment, applies a deterministic policy,
@@ -8,7 +10,7 @@ and records a report fingerprint onchain through Curvegrid MultiBaas.
 
 [Try the hosted demo](https://sekisho-phi.vercel.app/try/) ·
 [Verified evidence](docs/LIVE-EVIDENCE.md) · [Setup](docs/SETUP.md) ·
-[SDK](sdk/README.md) · [Documentation](docs/README.md)
+[SDK](sdk/README.md) · [Documentation](docs/README.md) · [Handoff](docs/HANDOFF.md)
 
 Built for ETHGlobal Tokyo 2026. This is a testnet prototype and demo policy, not a
 certified compliance programme or a guarantee that a wallet is safe.

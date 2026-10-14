@@ -32,6 +32,7 @@ Render Docker build and hosted Chrome paid/refused flows succeeded. Earlier
 contract verification passed 18 tests, including two 256-run fuzz checks; the console
 production build, lint and 45 report-hash checks also passed. These are dated results,
 not a claim that tests have been rerun after every documentation edit.
+The checks were rerun on 14 October 2026; results are in [HANDOFF.md](HANDOFF.md#verify-a-fresh-checkout).
 
 For a fresh checkout, use the commands in the [main README](../README.md),
 [console README](../dashboard/README.md), and [public deployment guide](PUBLIC-TRIAL.md).

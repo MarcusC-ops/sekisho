@@ -67,6 +67,7 @@ SDK example, console refinement, and live-proof readiness check.
 - [19 — Shared vibrant brand](19-vibrant-shared-brand.md)
 - [20 — Product finalisation](20-product-finalisation.md)
 - [21 — Public release cleanup](21-public-release-cleanup.md)
+- [22 — Handoff assets](22-handoff-assets.md)
 
 The duplicate historical number 18 is retained to avoid rewriting the recorded prompt
 identity. Authors and creation times still require the team's confirmation in [AI usage](../ai-usage.md).
