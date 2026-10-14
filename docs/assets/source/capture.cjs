@@ -1,5 +1,6 @@
 /** Re-render brand and presentation assets; requires an installed Playwright + Chromium.
  * CONSOLE_URL selects an already-running fixture console; omit to render artwork only.
+ * TRIAL_URL selects a deployed or local /try/ page for the recorded-evidence screenshot.
  * Optional PLAYWRIGHT_MODULE and CHROMIUM_EXECUTABLE use an existing local toolchain.
  */
 const path = require('node:path');
@@ -71,6 +72,17 @@ function writeIco(file, pngs) {
       console.log(`Rendered docs/assets/${variant}.png`);
     }
     await hiDpi.close();
+
+    if (process.env.TRIAL_URL) {
+      // The recorded panel is static page content; capturing it never starts a trial run.
+      const trial = await browser.newPage({ viewport: { width: 1280, height: 900 }, deviceScaleFactor: 2 });
+      await trial.goto(process.env.TRIAL_URL);
+      await trial.getByRole('heading', { name: 'One paid purchase. One stopped before payment.' }).waitFor();
+      await trial.evaluate(() => document.fonts.ready);
+      await trial.locator('.recorded-proof').screenshot({ path: path.join(out, 'trial-evidence.png') });
+      console.log('Captured recorded trial evidence trial-evidence.png');
+      await trial.close();
+    }
 
     if (process.env.CONSOLE_URL) {
       const console_ = await browser.newPage({ viewport: { width: 1440, height: 1000 } });

@@ -36,6 +36,10 @@ Served from `website/` and linked from every page head:
 
 ## Screenshots and licences
 
+[trial-evidence.png](trial-evidence.png) is the recorded hosted testnet evidence panel
+from the `/try/` page, used as the README product screenshot. It shows the dated 26 September
+2026 results that the page labels as recorded, not a new run.
+
 The [decisions](console-decisions.jpg), [case](console-case.jpg) and
 [treasury](console-treasury.png) images are historical fixture-console screenshots, not
 live financial evidence. The website uses compressed [decisions](../../website/assets/console-decisions.webp)
@@ -59,7 +63,10 @@ documentation tooling, not runtime dependencies. With Node and Playwright/Chromi
 ```bash
 node docs/assets/source/capture.cjs
 CONSOLE_URL=http://localhost:3000 node docs/assets/source/capture.cjs  # also recapture fixture screenshots
+TRIAL_URL=https://sekisho-phi.vercel.app/try/ node docs/assets/source/capture.cjs  # also recapture trial-evidence.png
 ```
+
+Capturing the trial page reads its static recorded panel; it never starts a trial run.
 
 `PLAYWRIGHT_MODULE` and `CHROMIUM_EXECUTABLE` select an installed toolchain. The cards
 use Georgia and Hiragino Mincho as system fonts, so other platforms substitute similar
