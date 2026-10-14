@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sekisho social cards</title>
+<!-- Rendered by capture.cjs: #home (website), #try (trial page), #github (repository preview). -->
+<style>
+@font-face { font-family: 'Inter Tight'; src: url('fonts/inter-tight-latin-wght-normal.woff2'); font-weight: 100 900; }
+* { box-sizing: border-box; margin: 0; }
+body { font-family: 'Inter Tight', Arial, sans-serif; color: #191817; }
+.card { width: 1280px; height: 640px; position: relative; overflow: hidden; padding: 0 72px;
+  background: radial-gradient(ellipse at 8% 18%, #ffd5bf 0, transparent 44%),
+              radial-gradient(ellipse at 96% 58%, #dfceff 0, transparent 50%),
+              linear-gradient(180deg, #fff8ed, #fff3df); }
+header { height: 112px; display: flex; align-items: center; gap: 14px; border-bottom: 1px solid #cfc0d9; }
+.brand { font-size: 34px; font-weight: 680; letter-spacing: -1.2px; }
+.kanji { font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif; font-size: 26px; color: #625e59; border-left: 1px solid #c9c1b8; padding-left: 16px; margin-left: 4px; }
+.pill { margin-left: auto; font-size: 16px; font-weight: 550; padding: 10px 18px; border: 1px solid #c8b7df; border-radius: 999px; background: #fff8ed; }
+main { display: grid; grid-template-columns: 1fr 392px; gap: 56px; align-items: center; height: 432px; }
+.eyebrow { color: #6438ce; font-size: 15px; font-weight: 650; letter-spacing: 2.2px; text-transform: uppercase; margin-bottom: 20px; }
+h1 { font-size: 80px; line-height: 1.0; font-weight: 780; letter-spacing: -2.8px; word-spacing: 4px; }
+h1 em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -3.4px; color: #b33d23; }
+.try h1 em { color: #6438ce; font-style: normal; }
+.panel { background: #fffcf7; border: 1px solid #d8cce5; border-radius: 24px; padding: 26px 28px; box-shadow: 0 8px 0 #eadfff; }
+.panel-label { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: #625e59; }
+.amount { font-size: 40px; font-weight: 750; letter-spacing: -1.4px; margin: 6px 0 2px; }
+.sub { font-size: 16px; color: #625e59; padding-bottom: 18px; border-bottom: 1px solid #ece3f2; }
+.row { display: flex; align-items: center; gap: 14px; padding-top: 16px; font-size: 19px; font-weight: 550; }
+.chip { width: 82px; text-align: center; font-size: 13px; font-weight: 700; letter-spacing: .9px; padding: 8px 0; border-radius: 7px; }
+.allow { color: #0f6e47; background: #e1f2e9; } .hold { color: #8a5700; background: #fcf1d6; } .block { color: #b42a1a; background: #fbe5e0; }
+footer { position: absolute; left: 72px; right: 72px; bottom: 34px; display: flex; justify-content: space-between; font-size: 16px; color: #625e59; }
+.variant { display: none; }
+</style>
+</head>
+<body>
+<div class="card" id="art">
+  <header><img src="../logo.svg" width="52" height="52" alt=""><span class="brand">Sekisho</span><span class="kanji" lang="ja">関所</span><span class="pill">x402 · Base Sepolia testnet</span></header>
+  <main>
+    <div>
+      <p class="eyebrow variant" data-for="home github">A checkpoint for AI payments</p>
+      <h1 class="variant" data-for="home github">Your AI can pay.<br><em>Who checks</em><br>the recipient?</h1>
+      <p class="eyebrow variant" data-for="try">Try Sekisho · No wallet needed</p>
+      <h1 class="variant" data-for="try">A five-cent report.<br><em>A decision</em><br><em>before payment.</em></h1>
+    </div>
+    <div class="panel">
+      <p class="panel-label">Before the agent signs</p>
+      <p class="amount">0.05 test USDC</p>
+      <p class="sub">x402 payment request · recipient screened</p>
+      <div class="row"><span class="chip allow">ALLOW</span>Signing permitted</div>
+      <div class="row"><span class="chip hold">HOLD</span>Paused for human review</div>
+      <div class="row"><span class="chip block">BLOCK</span>No payment signature</div>
+    </div>
+  </main>
+  <footer>
+    <span class="variant" data-for="home">Screen the wallet · Apply the policy · Record the decision</span>
+    <span class="variant" data-for="try">Live testnet trial · Clearly labelled simulations</span>
+    <span class="variant" data-for="github">github.com/MarcusC-ops/sekisho</span>
+    <span>Testnet prototype · Not a compliance guarantee</span>
+  </footer>
+</div>
+<script>
+const variant = location.hash.slice(1) || 'home';
+document.getElementById('art').classList.add(variant);
+for (const el of document.querySelectorAll('.variant'))
+  if (el.dataset.for.split(' ').includes(variant)) el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block';
+</script>
+</body>
+</html>
