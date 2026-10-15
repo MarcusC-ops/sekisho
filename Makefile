@@ -19,7 +19,7 @@ install: ## Python venv (gate, sdk, agents), contract libs, dashboard deps
 	$(PY) -m pip install -q -U pip
 	$(PY) -m pip install -q -r requirements.txt -c constraints.txt
 	git submodule update --init
-	cd dashboard && npm install
+	cd dashboard && npm ci
 
 wallets: ## Generate the four testnet keys into .env (prints addresses only)
 	$(PY) scripts/gen_wallets.py

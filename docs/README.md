@@ -8,6 +8,7 @@ Start with the [project overview](../README.md) or [hosted trial](https://sekish
 | [Public trial](PUBLIC-TRIAL.md) | Deploy the limited backend and understand its boundaries |
 | [Live evidence](LIVE-EVIDENCE.md) | Exact deployed contracts, cases, transactions and measured outcomes |
 | [Readiness](readiness.md) | Verified scope and remaining limitations |
+| [Handoff](HANDOFF.md) | What is running, accounts to transfer, verification results and open items |
 | [API](api.md) | Gate request/response and operator access contract |
 | [SDK](../sdk/README.md) | Integrate at the x402 payment boundary |
 | [Contracts](../contracts/README.md) | Registry/escrow invariants, deployment and ABI |
